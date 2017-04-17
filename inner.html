@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img src="http://placehold.it/150x100" alt="Логотип">
+      </div>
+      <div class="search">
+        <a href="#" class="btn-search">
+          Поиск по сайту
+        </a>
+      </div>
+      <div class="user-block">
+        <a class="user-block-item user-name  with-icon" href="#">
+            <span>Вылентин Петухов</span>
+        </a>
+        <a href="#" class="btn-user-block">
+          Выйти
+        </a>
+      </div>
+      <div class="compare-block">
+        <a href="" class="btn-compare-block">
+          Сравнить
+        </a>
+      </div>
+      <div class="basket">
+        <a href="" class="btn-basket">
+          Корзина
+          </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-list-item">Каталог товаров
+            <ul class="submenu">
+              <li class="submenu-item">Виртуальная реальность</li>
+              <li class="submenu-item">Моноподы для селфи</li>
+              <li class="submenu-item">Экшен-камеры</li>
+              <li class="submenu-item">Фитнес браслеты</li>
+              <li class="submenu-item">Умные часы</li>
+              <li class="submenu-item">Квадрокоптеры</li>
+            </ul>
+          </li>
+          <li class="main-nav-list-item">Доставка</li>
+          <li class="main-nav-list-item">Гарантия</li>
+          <li class="main-nav-list-item">Контакты</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+     <div class="breadcrumbs container">
+        <a class="breadcrumbs-item" href="index.html">
+           <img src="img/icon-home.png" alt="Главная">
+        </a>
+        <a class="breadcrumbs-item" href="catalog.html">
+        Каталог
+        </a>
+        <a class="breadcrumbs-item" href="#">
+        Инструмент
+        </a>
+        <a class="breadcrumbs-item breadcrumbs-item-current">
+          Моноподы для селфи
+        </a>
+      </div>
+      <div class="container">
+        <h1 class="catalog-h1"> Моноподы для селфи</h1>
+        <div class="filters">
+          <div class="catalog-block-title">Фильтр:</div>
+          <form class="filters-form" action="#" method="get">
+            <div class="filter filter-pricecount-wrapper">
+              <label class="fieldset-title" for="pricecount">
+                Стоимость:
+              </label>
+              <div class="filter-backing filter-pricecount">
+                <input type="range" class="pricecount" id="pricecount" name="pricecount" min="0" max="5000" step="5">
+                <div class="marker-begin"></div>
+                <div class="marker-end"></div>
+              </div>
+                <span class="range-min" id="range-min">0</span>
+                <span class="range-min-max">-</span>
+                <span class="range-max" id="range-max">5000</span>
+
+            </div>
+            <div class="filter">
+              <label class="fieldset-title">
+                Цвет:
+              </label>
+              <div class="filter-backing color-fildset">
+                <input type="checkbox" id="color-1" checked>
+                <label for="color-1" class="color">Чёрный</label>
+                <input type="checkbox" id="color-2">
+                <label for="color-2" class="color">Белый</label>
+                <input type="checkbox" id="color-3" checked>
+                <label for="color-3" class="color">Синий</label>
+                <input type="checkbox" id="color-4">
+                <label for="color-4" class="color">Красный</label>
+                <input type="checkbox" id="color-5">
+                <label for="color-5" class="color">Розовый</label>
+              </div>
+            </div>
+            <div class="filter">
+              <p class="fieldset-title">
+                Bluetooth:
+              </p>
+              <div class="filter-backing bluetooth-fildset">
+                <div class="filter-backing filters-form  filter-bluetooth">
+                  <input type="radio" name="bluetooth" id="bluetooth-0" value="0" checked>
+                  <label for="bluetooth-0" class="product-powered">
+                    Есть
+                  </label>
+                  <input type="radio" name="bluetooth" id="bluetooth-1" value="1" >
+                  <label for="bluetooth-1" class="bluetooth">
+                    Нет
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="catalog-button" type="submit">
+              ПОКАЗАТЬ
+            </button>
+          </form>
+        </div>
+        <div class="catalog">
+        <div class="filter-sort-product">
+          <div class="catalog-block-title">
+            Сортировка
+          </div>
+          <div class="filter-backing">
+            <form class="filters-form" action="#" method="get">
+              <input type="radio"  id="sort-product-1" name="sort-product" value="sort-by-price" class="input-sort" checked >
+              <label for="sort-product-1" class="label-sort label-sort-by-price">
+                <b>
+                  по цене
+                </b>
+              </label>
+              <input type="radio"  id="sort-product-2" name="sort-product" value="sort-by-type" class="input-sort">
+              <label for="sort-product-2" class="label-sort label-sort-by-type">
+                <b>
+                  по типу
+                </b>
+              </label>
+              <input type="radio"  id="sort-product-3" name="sort-product"  value="sort-by-popularity" class="input-sort">
+              <label for="sort-product-3" class="label-sort label-sort-by-popularity">
+                <b>
+                  по популярности
+                </b>
+              </label>
+              <input type="radio"  id="sort-product-direction-up" name="sort-product-direction" class="sort-product-direction" checked>
+              <label for="sort-product-direction-up">
+                Вверх
+              </label>
+              <input type="radio"  id="sort-product-direction-down" name="sort-product-direction" class="sort-product-direction">
+              <label for="sort-product-direction-down">
+                Вниз
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="products-list">
+          <article class="product">
+            <div class="product-photo">
+              <img src="http://placehold.it/150x100" width="220" height="150"  alt="товар">
+            </div>
+            <div class="product-description">
+              <h5 class="product-description-heder">
+                Любительская селфи-палка
+              </h5>    
+              <b class="product-price">
+                  500 руб.
+              </b>
+            </div>
+            <a class="buy-product" href="#">В корзину</a>
+            <a class="to-bookmarks" href="#">Добавить к сравнению</a>
+          </article>
+          <article class="product">
+            <div class="product-photo">
+              <img src="http://placehold.it/150x100" width="220" height="150"  alt="товар">
+            </div>
+            <div class="product-description">
+              <h5 class="product-description-heder">
+                Профессиональная селфи-палка
+              </h5>
+              <b class="product-price">
+                1500 руб.
+              </b>
+            </div>            
+            <a class="buy-product" href="#">В корзину</a>
+            <a class="to-bookmarks" href="#">Добавить к сравнению</a>
+          </article>
+          <article class="product">
+            <div class="product-photo">
+              <img src="http://placehold.it/150x100"  width="220" height="150"  alt="товар">
+            </div>
+            <div class="product-description">
+              <h5 class="product-description-heder">
+                Непотопляемая селфи-палка
+              </h5>              
+              <b class="product-price">
+                2500 руб.
+              </b>
+            </div>
+            <a class="buy-product" href="#">Купить</a>
+            <a class="to-bookmarks" href="#">В закладки</a>
+          </article>
+          <article class="product new_flag">
+            <div class="product-photo">
+              <img src="http://placehold.it/150x100" width="220" height="150"  alt="товар">
+            </div>
+            <div class="product-description">
+              <h5 class="product-description-heder">  
+                Селфи-палка "Следуй за мной"
+              </h5>              
+              <b class="product-price">
+                4900 руб.
+              </b>
+            </div>
+            <a class="buy-product" href="#">В корзину</a>
+            <a class="to-bookmarks" href="#">Добавить к сравнению</a>
+          </article>
+          
+        </div>
+        <div class="switch-pages">
+          <a class="switch-pages-item switch-pages-outside catalog-button">
+          Назад
+          </a>
+          <a class="switch-pages-item switch-pages-item-current catalog-button">
+          1
+          </a>
+          <a class="switch-pages-item catalog-button" href="#">
+          2
+          </a>
+          <a class="switch-pages-item catalog-button" href="#">
+          3
+          </a>
+          <a class="switch-pages-item switch-pages-not-outside catalog-button" href="#">
+          Вперёд
+          </a>
+        </div>
+      </div>
+    </div>     
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer-top">
+        <div class="container">
+          <div class="footer-left-column">
+            <a class="logo-footer logo" href="index.html">
+              <img src="http://placehold.it/150x100" alt="Логотип">      
+            </a>
+            <section class="footer-contacts">
+              <div>
+                г. Москва, ул.Строителей, 15
+              </div>              
+            </section>
+          </div>
+          <div class="footer-right-column">
+            <section class="footer-action">
+              <div class="user-block">
+                <a href="#" class="btn-user-block">
+                  Войти
+                </a>
+              </div>
+              <div class="compare-block">
+                <a href="" class="btn-compare-block">
+                  Сравнить
+                </a>
+              </div>
+              <div class="basket">
+                <a href="" class="btn-basket">
+                  Корзина
+                  </a>
+              </div>
+            </section>
+            <section class="footer-menu">
+              <ul class="footer-menu-list">
+                <li><a class="footer-menu-item" href="#">Доставка</a></li>
+                <li><a class="footer-menu-item" href="#">Гарантия</a></li>
+                <li><a class="footer-menu-item" href="catalog.html">Контакты</a></li>                
+              </ul>
+            </section>
+            <section class="company-phone">
+              Тел.: +7 (495) 495-95-95
+            </section>            
+          </div>
+        </div>
+      </div>
+      <div class="main-footer-bottom container">        
+        <section class="footer-social">
+          <a class="social-btn social-btn-fb  with-icon sprite-icon-facebook" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-inst  with-icon sprite-icon-instagramm" href="#">instagramm</a>
+          <a class="social-btn social-btn-tw  with-icon sprite-icon-tw" href="#">Twitter</a>
+        </section>
+       
+        <section class="footer-copyright">
+            <a class="footer-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru </a>
+        </section>
+      </div>
+    </footer>
+
+  </body>
+</html>
