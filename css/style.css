@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroylight.woff2');
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Gilroy';
@@ -7,33 +13,26 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/gilroylight.woff2');
-  font-weight: 300;
-  font-style: normal;
-}
-
-
-@font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensanslight.woff2');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensans.woff2');
-  font-weight: ExtraBold;
+  font-weight: 900;
   font-style: normal;
 }
 
 body {
-	font-family: "Open Sans", "Arial", sens-serif;
-	font-size: 15px;
-	font-weight: normal;
-	line-height: 30px;
-	color: #000000;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #000000;
 }
 
 a{
@@ -62,7 +61,7 @@ a{
   min-height: 36px;
   margin: 16px 60px 0 56px;
   z-index: 2;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 48px;
   font-weight: 900;
   line-height: 48px;
@@ -79,10 +78,16 @@ a{
   color: #666666;
 }
 
+.main-header {
+  position: relative;
+  z-index: 100;
+}
+
 .header-wrap {
   position: relative;
-  padding: 45px 60px;
-  min-height: 215px;
+  padding: 45px 60px 10px;
+  margin-bottom: -35px;
+  min-height: 100px;
   z-index: 1;
   bottom: 25px;
   background-color: #f7e296;
@@ -95,7 +100,6 @@ a{
   opacity: 0.7;
   text-decoration: none;
 }
-
 
 .search {
   min-width: 420px;
@@ -124,7 +128,6 @@ a{
 .search-text:required + .search-label  {
   display: none;
 }
-
 
 .search-text:after {
   content: "";
@@ -267,7 +270,6 @@ a{
 }
 
 
-
 .menu-item:active>a,
 .btn-user-block:active,
 .btn-user-block:active:before,
@@ -277,7 +279,6 @@ a{
 .btn-basket:active:before {
   opacity: 0.3;
 }
-
 
 
 .user-block {
@@ -298,26 +299,28 @@ a{
   padding-left: 21px;
 }
 
-
 .main-nav {
-  padding-top: 52px;
+  position: relative;
+  padding-top: 13px;
 }
 
 .main-nav-list,
 .submenu {
+  position: relative;
   list-style: none;
   padding: 0;
+  margin: 12px 0;
 }
 
-
 .main-nav-list-item {
+  position: relative;
   display: block;
   min-width: 140px;
   margin-right: 20px;
   float: left;
-	font-family: "Gilroy", "Arial", sens-serif;
+	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight:  Bold;
+	font-weight: 900;
 	line-height: auto;
   letter-spacing: 3px;
 	color: inherit;
@@ -334,20 +337,29 @@ a{
   margin-right: 0;
 }
 
-
 .submenu {
   position: absolute;
   display: none;
   min-width: 1040px;
+  top: 15px;
   margin-left: -60px;
+  padding-top: 10px;
   padding-left: 60px;
   padding-right: 60px;
-  min-height: 163px;
+  min-height: 153px;
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 0.5px;
   background-color: #f7e296;
-  z-index: 100;
+}
+
+.main-nav-list-item {
+  z-index: 1000;
+}
+
+.submenu:hover{
+  display: block;
+  z-index: 1000;
 }
 
 .submenu-block {
@@ -357,20 +369,18 @@ a{
   vertical-align: top;
 }
 
-.menu-item-catalog:hover .submenu{
+.menu-item-catalog:hover>.submenu{
   display: block;
-  z-index: 1000;
 }
 
 .submenu-item {
   font-size: 15px;
-  font-family: "Open Sans", "Arial", sens-serif;
-  font-weight: normal;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
   line-height: 36px;
 	color: inherit;
   text-transform: none;
   text-shadow:0 0 0;
-
 }
 
 .menu-item-catalog{
@@ -395,7 +405,7 @@ a{
 
 .menu-item-catalog:active:before,
 .menu-item-catalog:active:after {
-  background-color: #e2cf8a
+  background-color: #e2cf8a;
 }
 
 .menu-item-catalog:after {
@@ -405,9 +415,10 @@ a{
 .promo-slider{
   display: block;
   position: relative;
-  z-index: 1;
-  bottom: 150px;
-  min-height: 570px;
+  min-height: 602px;
+  padding-top: 35px;
+  z-index: 10;
+  background: linear-gradient(to bottom, #f7e296 155px, transparent 145px)
 }
 
 .promo-slider-list {
@@ -424,13 +435,15 @@ a{
 .promo-slider-item .promo-slider-item-content:before{
   content: "";
   position: absolute;
+  left: 5px;
+  top: 35px;
   width: 100px;
-  height: 9px;
+  height: 8px;
   background-color: #ffffff;
 }
 
 .promo-slider-item:nth-of-type(1) .promo-slider-item-content{
-  background: url("../img/01.png")  no-repeat 340px 10px;
+  background: url("../img/01.png")  no-repeat 340px 8px;
 }
 
 .promo-slider-item:nth-of-type(2) .promo-slider-item-content{
@@ -448,7 +461,7 @@ a{
 .promo-slider-control {
   display: block;
   position: absolute;
-  top: 317px;
+  top: 360px;
   right: 64px;
 }
 
@@ -456,7 +469,7 @@ a{
   display: inline-block;
   width: 4px;
   height: 4px;
-  margin-right:  20px;
+  margin-right:  19px;
   border: 3px solid #b2b2b2;
   border-radius: 50%;
 }
@@ -474,8 +487,6 @@ a{
   border: 3px solid #000000;
 }
 
-
-
 .promo-slider-item-photo {
   display: block;
   float: left;
@@ -483,19 +494,19 @@ a{
   margin-left: 30px;
 }
 
-
 .promo-slider-item-content {
+  position: relative;
   display: block;
   float: left;
   max-width: 504px;
-  padding: 39px 0;
+  padding: 40px 0;
   margin-left: 56px;
 }
 
 .title2{
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
-  font-weight:  900;
+  font-weight: 900;
   line-height: 56px;
   letter-spacing: 1px;
   color:inherit;
@@ -506,7 +517,7 @@ a{
   position: relative;
   bottom: 20px;
   padding-left: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
 }
 
 
@@ -529,30 +540,31 @@ a{
 
 .features-list-item-value {
   display: block;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 
 .features-list-item-label {
-  font-family: "Open Sans", "Arial", sens-serif;
-	font-size: 13px;
-	font-weight:  normal;
-	line-height: 20px;
-	color: inherit;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  color: inherit;
 }
 
 .categories {
+  padding-top: 89px;
   position: relative;
-  bottom: 55px;
+  /*bottom: 55px;*/
 }
-
 
 .categories-list {
   list-style: none;
   padding: 0;
   font-size: 0;
+  letter-spacing: 0;
 }
 
 .categories-list-item {
@@ -573,9 +585,9 @@ a{
   min-height: 42px;
   padding-right: 30px;
   padding-top: 195px;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight:  900;
+	font-weight: 900;
 	line-height: 21px;
 	color:inherit;
   letter-spacing: 0.5px;
@@ -625,7 +637,7 @@ a{
 
 .services {
   position: relative;
-  bottom: 70px;
+  bottom: 17px;
   min-height: 400px;
   background: linear-gradient(to bottom, transparent 110px, #e5e5e5 110px);
 }
@@ -658,7 +670,7 @@ a{
   padding-left: 12px;
   min-width: 148px;
   min-height: 18px;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 900;
   line-height: 18px;
@@ -687,7 +699,7 @@ a{
 }
 
 .service-info-delivery {
-  background: url("../img/delivery.png") no-repeat 560px 100px;
+  background: url("../img/delivery.png") no-repeat 557px 97px;
 }
 
 .service-info-guaranty {
@@ -699,7 +711,7 @@ a{
 }
 
 .btn-slider {
-  margin-bottom: 53px;
+  margin-bottom: 58px;
 }
 
 .button {
@@ -708,7 +720,7 @@ a{
   background: linear-gradient(to bottom, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
   box-shadow: none;
   border: none;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 40px;
   font-weight: 900;
@@ -750,9 +762,10 @@ a{
 }
 
 .popular-producers {
-  margin-top: 20px;
+  margin-top: 77px;
   margin-bottom: 80px;
   font-size: 0;
+  letter-spacing: 0;
 }
 
 .popular-producers-logo {
@@ -797,8 +810,8 @@ a{
 }
 
 .about-company{
-  padding-top: 10px;
-  margin-bottom: 75px;
+  padding-top: 7px;
+  margin-bottom: 81px;
 }
 
 .about-company .btn {
@@ -814,16 +827,16 @@ a{
 .about-company-item::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: -7px;
-  width: 80px;
-  height: 7px;
+  left: 2px;
+  top: -10px;
+  width: 81px;
+  height: 8px;
   background-color: #000000;
 }
 
 .about-company-info {
   max-width: 460px;
-  padding-right: 140px;
+  padding-right: 137px;
 }
 
 .about-company-contacts {
@@ -836,10 +849,10 @@ a{
 
 .transport-companies-list{
   margin-bottom: 55px;
-  padding-top: 8px;
+  padding-top: 5px;
   padding-left: 35px;
   list-style: none;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 18px;
@@ -861,8 +874,6 @@ a{
   border-radius: 50%
 }
 
-
-
 .map {
   display: block;
   padding-top: 10px;
@@ -871,13 +882,11 @@ a{
 
 .main-footer{
   margin-top: 0;
-  padding-top:60px;
+  padding-top: 60px;
   background-color: #464646;
   color: #ffffff;
 }
-.inner-footer {
-  margin-top: 15px;
-}
+
 
 .footer-left-column,
 .footer-right-column,
@@ -908,8 +917,9 @@ a{
 }
 
 .footer-menu-list {
-  padding-top: 55px;
-  padding-left: 35px;
+  margin-bottom: 0;
+  padding-top: 57px;
+  padding-left: 37px;
   list-style: none;
 }
 
@@ -918,14 +928,13 @@ a{
   min-width: 140px;
   margin-right: 20px;
   float: left;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
-  font-weight:  Bold;
+  font-weight: 900;
   line-height: auto;
   letter-spacing: 3px;
   color: inherit;
   text-transform: uppercase;
-  text-shadow: 1px 0 0;
 }
 
 .last-item {
@@ -935,6 +944,7 @@ a{
 
 .footer-action {
   display: block;
+  padding-top: 3px;
 }
 
 .footer-up-block{
@@ -944,7 +954,7 @@ a{
 .footer-up-block.user-block{
   min-width: 35px;
   padding-left: 30px;
-  margin-right: 33px;
+  margin-right: 34px;
 }
 
 .footer-up-block.user-block a {
@@ -959,19 +969,19 @@ a{
 
 .footer-contacts {
   display: block;
-  padding-top: 25px;
+  padding-top: 23px;
   text-align: left;
 }
 
 .main-footer-bottom {
-  padding-top: 55px;
+  padding-top: 56px;
   padding-bottom: 60px;
 }
 
 .footer-line {
   width: 80px;
   height: 7px;
-  margin-top: 20px;
+  margin-top: 19px;
   background-color: #f7e184;
 }
 
@@ -1020,6 +1030,7 @@ a{
   display: block;
   min-width: 30px;
   min-height: 40px;
+  margin-top: 5px;
   float: right;
   background: url("../img/logo-htmlacademy-yellow.png") no-repeat;
 }
@@ -1037,7 +1048,8 @@ a{
 
 /*внутренняя страница*/
 .header-wrap-inner {
-  min-height: 100px;
+  min-height: 130px;
+  margin-bottom: 10px;
 }
 
 .inner-title{
@@ -1102,7 +1114,7 @@ a{
   display: block;
   min-height: 70px;
   padding-left: 60px;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 70px;
@@ -1126,7 +1138,7 @@ a{
 
 .filter-pricecount-wrapper {
   min-height: 140px;
-  padding-top: 68px;
+  padding-top: 70px;
 }
 .filter-pricecount {
   position: relative;
@@ -1136,7 +1148,7 @@ a{
 .fieldset-title{
   display: block;
   max-width: 200px;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 42px;
@@ -1211,7 +1223,7 @@ a{
   padding-bottom: 14px;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 300;
   opacity: 0.2;
   text-align: left;
 }
@@ -1272,7 +1284,7 @@ a{
 .filters-form input[type="checkbox"]:checked+label::after{
   content: "";
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 6px;
   width: 8px;
   height: 4px;
@@ -1283,8 +1295,8 @@ a{
 }
 
 .bluetooth:before {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 3px solid #dbdbdb;
   border-radius: 50%;
 }
@@ -1300,8 +1312,8 @@ a{
 .filters-form input[type="radio"]:checked+label::after {
   content: "";
   position: absolute;
-  top:12px;
-  left: 6px;
+  top: 10px;
+  left: 5px;
   width: 4px;
   height: 4px;
   border:  3px solid #000000;
@@ -1309,7 +1321,8 @@ a{
 }
 
 .catalog-button {
-  margin-top: 25px;
+  margin-top: 15px;
+  margin-left: -2px;
   padding: 0 40px;
 
 }
@@ -1419,9 +1432,10 @@ a{
 .products-list {
   float: left;
   max-width: 800px;
-  padding-top: 35px;
+  padding-top: 38px;
   padding-left: 30px;
   font-size: 0;
+  letter-spacing: 0;
 }
 
 .product {
@@ -1429,10 +1443,10 @@ a{
   display: inline-block;
   max-width: 360px;
   min-height: 270px;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-left: 40px;
-  margin-bottom: 3px;
-  font-family: "Gilroy", "Arial", sens-serif;
+  /*margin-bottom: 3px;*/
+  font-family: "Gilroy", "Arial", sans-serif;
   cursor: pointer;
 }
 
@@ -1468,7 +1482,7 @@ a{
   padding: 0 23px;
   z-index: 50;
   opacity: 0.5;
-  font-family: "Open Sans", "Arial", sens-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 300;
   line-height: 40px;
@@ -1492,9 +1506,9 @@ a{
   display: block;
   float: left;
   min-width: 280px;
-  margin: 15px 0;
+  margin: 19px 0;
   font-size: 18px;
-  font-weight:  900;
+  font-weight: 900;
   line-height: 20px;;
   color:inherit;
 }
@@ -1504,7 +1518,7 @@ a{
   min-width: 80px;
   padding-top: 15px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   color: #464646;
   text-align: right;
 }
@@ -1513,8 +1527,8 @@ a{
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 25px;
-  right:25px;
+  top: 30px;
+  right: 27px;
   background: url("../img/icon-new.png");
 }
 
@@ -1522,11 +1536,11 @@ a{
   float: left;
   min-width: 760px;
   min-height: 70px;
-  margin-top: 30px;
+  margin-top: 23px;
   margin-left: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 73px;
   background-color: #ebebeb;
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 70px;
@@ -1556,7 +1570,7 @@ a{
   display: block;
   float: left;
   min-width: 70px;
-  padding: 0 30px;
+  padding: 0 20px 0 30px;
 }
 .switch-pages-item-begin:hover,
 .switch-pages-item-begin:active,
@@ -1573,7 +1587,7 @@ a{
 
 .switch-pages-nubmers {
   float: left;
-  min-width: 485px;
+  min-width: 500px;
   text-align: center;
 }
 
@@ -1707,9 +1721,9 @@ a{
 }
 
 .feedback-form label {
-  font-family: "Gilroy", "Arial", sens-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
-  font-weight:  900;
+  font-weight: 900;
   line-height: 18px;
   color:inherit;
   letter-spacing: 0.5px;
@@ -1717,7 +1731,7 @@ a{
 
 .feedback-form input,
 .feedback-form textarea{
-  font-family: "open Sans", "Arial", sens-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 50px;
   color: #464646;
