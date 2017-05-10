@@ -44,40 +44,40 @@
               Каталог товаров
             </a>
             <ul class="submenu">
-              <div class="submenu-block">
-                <li class="submenu-item">
+              <li class="submenu-block">
+                <div class="submenu-item">
                   <a href="#">
                     Виртуальная реальность
                   </a>
-                </li>
-                <li class="submenu-item">
+                </div>
+                <div class="submenu-item">
                   <a href="inner.html">
                     Моноподы для селфи
                   </a>
-                </li>
-                <li class="submenu-item">
+                </div>
+                <div class="submenu-item">
                   <a href="#">
                     Экшен-камеры
                   </a>
-                </li>
-              </div>
-              <div class="submenu-block">
-                <li class="submenu-item">
+                </div>
+              </li>
+              <li class="submenu-block">
+                <div class="submenu-item">
                   <a href="#">
                     Фитнес браслеты
                   </a>
-                </li>
-                <li class="submenu-item">
+                </div>
+                <div class="submenu-item">
                   <a href="#">Умные часы
                   </a>
-                </li>
-              </div>
-              <div class="submenu-block">
-                <li class="submenu-item">
+                </div>
+              </li>
+              <li class="submenu-block">
+                <div class="submenu-item">
                   <a href="#">Квадрокоптеры
                   </a>
-                </li>
-              </div>
+                </div>
+              </li>
             </ul>
           </li>
           <li class="main-nav-list-item menu-item">
@@ -101,11 +101,11 @@
   </header>
   <main>
     <section class="promo-slider container">
-      <ul class="promo-slider-list clearfix">
+      <div class="promo-slider-list clearfix">
         <input class="promo-slider_input" type="radio" name="promo" id="btn-1" checked>
         <input class="promo-slider_input" type="radio" name="promo" id="btn-2">
         <input class="promo-slider_input" type="radio" name="promo" id="btn-3">
-        <li class="promo-slider-item" id="slide-1">
+        <div class="promo-slider-item" id="slide-1">
           <div class="promo-slider-item-photo">
             <img src="img/slider-1.png"  width="384" height="486" alt="Селфи-палка">
           </div>
@@ -135,8 +135,8 @@
               </li>
             </ul>
           </div>
-        </li>
-        <li class="promo-slider-item" id="slide-2">
+        </div>
+        <div class="promo-slider-item" id="slide-2">
           <div class="promo-slider-item-photo">
             <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
           </div>
@@ -157,8 +157,8 @@
               </li>
             </ul>
           </div>
-        </li>
-        <li class="promo-slider-item" id="slide-3">
+        </div>
+        <div class="promo-slider-item" id="slide-3">
           <div class="promo-slider-item-photo">
             <img src="img/slider-3.png" width="526" height="350" alt="Квадрокоптер">
           </div>
@@ -183,7 +183,7 @@
               </li>
             </ul>
           </div>
-        </li>
+        </div>
         <div class="promo-slider-control">
           <label class="promo-slider-control-btn" for="btn-1">
           </label>
@@ -192,7 +192,7 @@
           <label class="promo-slider-control-btn" for="btn-3">
           </label>
         </div>
-      </ul>
+      </div>
 
     </section>
     <section class="categories container">
@@ -203,7 +203,7 @@
           </a>
         </li>
         <li class="categories-list-item">
-          <a href="#"  class="categories-list-item-link">
+          <a href="inner.html"  class="categories-list-item-link">
             Моноподы для селфи
           </a>
         </li>
@@ -390,24 +390,27 @@
     </div>
   </footer>
   <div class="overlay"></div>
-    <div class="modal-content">
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-        <form class="feedback-form" action="#" method="post">
-          <div class="clearfix">
-            <div class="feedback-form-block">
-              <label for="feedback-form-name">Ваше имя:</label>
-              <input  class="feedback-form-name"  type="text" name="feedback-form-name" id="feedback-form-name" placeholder="Представьтесь, пожалуйста" required>
-            </div>
-            <div class="feedback-form-block">
-              <label class="feedback-form-email-label">Ваш e-mail:</label>
-              <input class="feedback-form-email"  type="email"  name="feedback-form-email" id="feedback-form-mail" placeholder="Для отправки ответа" required>
-            </div>
+  <div class="modal-map">
+    <button class="modal-map-close" type="button" title="Закрыть карту">Закрыть</button>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f0d82ad61b750a9982414fd5fda3fcc7acde2b25e532ebe6f1967cc40fe0cbf&amp;width=970&amp;height=560&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+  <div class="modal-content">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="feedback-form" action="#" method="post">
+        <div class="clearfix">
+          <div class="feedback-form-block">
+            <label for="feedback-form-name">Ваше имя:</label>
+            <input  class="feedback-form-name"  type="text" name="feedback-form-name" id="feedback-form-name" placeholder="Представьтесь, пожалуйста" required>
           </div>
-          <label>Текст письма:</label>
-          <textarea class="feedback-form-content" name="feedback-form-content" id="feedback-form-content" placeholder="В свободной форме"></textarea>
-          <button class="btn button" type="submit">Отправить</button>
-        </form>
-      </div>
+          <div class="feedback-form-block">
+            <label class="feedback-form-email-label">Ваш e-mail:</label>
+            <input class="feedback-form-email"  type="email"  name="feedback-form-email" id="feedback-form-mail" placeholder="Для отправки ответа" required>
+          </div>
+        </div>
+        <label>Текст письма:</label>
+        <textarea class="feedback-form-content" name="feedback-form-content" id="feedback-form-content" placeholder="В свободной форме"></textarea>
+        <button class="btn button" type="submit">Отправить</button>
+      </form>
     </div>
     <script src="js/modal_script.js"></script>
   </body>

@@ -1577,6 +1577,29 @@ a{
   text-align: center;
 }
 
+/* Всплывающая форма */
+@-webkit-keyframes ffanim {
+  0%  {
+    -webkit-transform: translate(-50%,100%);
+            transform: translate(-50%,100%);
+  }
+
+  100%  {
+    -webkit-transform: translateY(-50%,50%);
+            transform: translateY(-50%,50%);
+  }
+}
+@keyframes ffanim {
+  0%  {
+    -webkit-transform: translate(-50%,100%);
+            transform: translate(-50%,100%);
+  }
+
+  100%  {
+    -webkit-transform: translateY(-50%,50%);
+            transform: translateY(-50%,50%);
+  }
+}
 
 .modal-content {
   position: fixed;
@@ -1593,13 +1616,26 @@ a{
   box-shadow: 0 0 20px #000000;
 }
 
+.modal-map {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);*
+    width: 760px;
+    z-index: 1000;
+    box-shadow: 0 0 20px #000000;
+}
+
 
 .modal-content-show {
   display: block;
   animation: ffanim 0.5s;
 }
 
-.modal-content-close {
+.modal-content-close,
+.modal-map-close  {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -1614,13 +1650,17 @@ a{
 }
 
 .modal-content-close:hover,
-.modal-content-close:active {
+.modal-content-close:active,
+.modal-map-close:hover,
+.modal-map-close:active {
   background-color: #f0c52e;
 }
 
 
 .modal-content-close:before,
-.modal-content-close:after {
+.modal-content-close:after,
+.modal-map-close:before,
+.modal-map-close:after {
   content: "";
   position: absolute;
   left: 10px;
@@ -1631,15 +1671,19 @@ a{
 }
 
 .modal-content-close:active:before,
-.modal-content-close:active:after{
+.modal-content-close:active:after,
+.modal-map-close:active:before,
+.modal-map-close:active:after{
   background-color: #f5d76d;
 }
 
-.modal-content-close::before {
+.modal-content-close::before,
+.modal-map-close::before {
   transform: rotate(45deg);
 }
 
-.modal-content-close::after {
+.modal-content-close::after,
+.modal-map-close::after {
   transform: rotate(135deg);
 }
 
@@ -1705,6 +1749,12 @@ input:-moz-placeholder {
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   box-shadow:inset 0 0 2px #afcdea;
+}
+
+.feedback-form input:invalid
+{
+  background-color: #f6dada;
+  border:none;
 }
 
 
